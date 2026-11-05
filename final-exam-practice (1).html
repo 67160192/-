@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ข้อสอบจำลอง 88734065 — สัปดาห์ 9-14</title>
+<style>
+  :root {
+    --bg: #f7f6f2; --surface: #ffffff; --text: #1f1d1a; --muted: #6b665e;
+    --border: #e2ded4; --accent: #8a4b1f; --ok: #2e7d4f; --ok-bg: #e6f3ea;
+    --bad: #b03a2e; --bad-bg: #f8e5e2; color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1917; --surface: #242320; --text: #ece9e2; --muted: #a39d92;
+      --border: #3a3832; --accent: #d8955e; --ok: #6fbf8a; --ok-bg: #1f3427;
+      --bad: #e0776b; --bad-bg: #3a2220; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1917; --surface: #242320; --text: #ece9e2; --muted: #a39d92;
+    --border: #3a3832; --accent: #d8955e; --ok: #6fbf8a; --ok-bg: #1f3427;
+    --bad: #e0776b; --bad-bg: #3a2220; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: "Sarabun", "Noto Sans Thai", "Tahoma", system-ui, sans-serif;
+    line-height: 1.7; padding: env(safe-area-inset-top, 0px) 16px env(safe-area-inset-bottom, 0px);
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 24px 0 64px; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; }
+  h2 { font-size: 1.25rem; margin: 36px 0 12px; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  h3 { font-size: 1.05rem; margin: 6px 0 10px; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 14px; }
+  .note { font-size: 0.92rem; color: var(--muted); }
+  .table-scroll { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; background: var(--surface); font-size: 0.95rem; }
+  th, td { padding: 9px 12px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+  th { background: var(--bg); font-weight: 600; }
+  .q { font-weight: 600; margin-bottom: 8px; }
+  .opts label { display: block; padding: 7px 10px; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 6px; cursor: pointer; }
+  .opts label:hover { border-color: var(--accent); }
+  .opts input { margin-right: 8px; }
+  .opts label.correct { background: var(--ok-bg); border-color: var(--ok); }
+  .opts label.wrong { background: var(--bad-bg); border-color: var(--bad); }
+  .expl { display: none; margin-top: 10px; padding: 10px 12px; border-left: 3px solid var(--accent); background: var(--bg); border-radius: 6px; font-size: 0.95rem; }
+  .expl.show { display: block; }
+  button { font: inherit; cursor: pointer; padding: 9px 18px; border-radius: 8px; border: 1px solid var(--accent); background: var(--accent); color: #fff; }
+  button.ghost { background: transparent; color: var(--accent); }
+  .bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 14px 0; }
+  .score { font-weight: 600; font-size: 1.05rem; }
+  select, textarea { font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 6px 8px; max-width: 100%; }
+  textarea { width: 100%; min-height: 90px; }
+  details { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; margin-top: 10px; }
+  summary { cursor: pointer; color: var(--accent); font-weight: 600; }
+  .match-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px dashed var(--border); }
+  .match-row .label { flex: 1 1 280px; }
+  .match-result { font-size: 0.9rem; }
+  .ok { color: var(--ok); } .no { color: var(--bad); }
+  ol.plain { padding-left: 20px; margin: 6px 0; }
+  .group-title { font-weight: 600; margin: 14px 0 6px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>ข้อสอบจำลอง 88734065 การวิเคราะห์และออกแบบระบบ</h1>
+<p class="sub">จัดรูปแบบให้ตรงตามแนวข้อสอบปลายภาค ครอบคลุมสัปดาห์ 9–14 เนื้อหาอ้างอิงจากสไลด์ wk09_merged เท่านั้น</p>
+
+<div class="card">
+  <strong>รูปแบบและจำนวนข้อ (ตรงตามแนวข้อสอบ)</strong>
+  <div class="table-scroll" style="margin-top:10px">
+  <table>
+    <tr><th>ตอน</th><th>รูปแบบ</th><th>จำนวน</th><th>คะแนน</th></tr>
+    <tr><td>1</td><td>ปรนัยชนิดเลือกตอบ 4 ตัวเลือก</td><td>60 ข้อ</td><td>60</td></tr>
+    <tr><td>2</td><td>จับคู่: 4+1 View กับ diagram (4 ข้อ), ระบุด่านป้องกันความเสี่ยง (3 ข้อ), จับคู่ Usability Heuristic (3 ข้อ)</td><td>10 ข้อ</td><td>10</td></tr>
+    <tr><td>3</td><td>ตอบโดยย่อ ข้อละ 1–3 บรรทัด</td><td>5 ข้อ</td><td>10</td></tr>
+    <tr><td>4</td><td>วิเคราะห์กรณีศึกษา</td><td>1 ข้อ</td><td>10</td></tr>
+  </table>
+  </div>
+</div>
+
+<h2>ตอนที่ 1: ปรนัยชนิดเลือกตอบ (60 ข้อ)</h2>
+<p class="note">ทำให้เสร็จก่อนแล้วกดตรวจคำตอบ คำอธิบายจะแสดงหลังตรวจ</p>
+<div id="mcq"></div>
+<div class="bar">
+  <button id="checkMcq">ตรวจคำตอบตอนที่ 1</button>
+  <span class="score" id="mcqScore"></span>
+  <button class="ghost" id="resetMcq">ทำใหม่</button>
+</div>
+
+<h2>ตอนที่ 2: จับคู่ (10 ข้อ)</h2>
+<div class="card">
+  <h3>2.1 จับคู่ 4+1 View กับ diagram (4 ข้อ)</h3>
+  <div id="match1"></div>
+</div>
+<div class="card">
+  <h3>2.2 จับคู่ความเสี่ยงกับด่านป้องกัน (3 ข้อ)</h3>
+  <div id="match2"></div>
+</div>
+<div class="card">
+  <h3>2.3 จับคู่ Usability Heuristic กับสถานการณ์ (3 ข้อ)</h3>
+  <div id="match3"></div>
+</div>
+<div class="bar">
+  <button id="checkMatch">ตรวจตอนที่ 2</button>
+  <span class="score" id="matchScore"></span>
+</div>
+
+<h2>ตอนที่ 3: ตอบโดยย่อ (5 ข้อ)</h2>
+<div id="short"></div>
+
+<h2>ตอนที่ 4: วิเคราะห์กรณีศึกษา (1 ข้อ)</h2>
+<div class="card">
+  <p class="q">สถานการณ์: ร้านเบเกอรี่แห่งหนึ่งต้องการระบบสั่งซื้อและตัดสต็อกวัตถุดิบ พนักงานหลายสาขาใช้ระบบพร้อมกัน และเจ้าของร้านต้องการดูรายงานยอดขายรายเดือนของแต่ละสาขา</p>
+  <p>จงตอบคำถามต่อไปนี้</p>
+  <ol class="plain">
+    <li>เลือก diagram อย่างน้อย 2 ชนิดที่เหมาะกับระบบนี้ พร้อมเหตุผล</li>
+    <li>ระบุความเสี่ยงด้านความปลอดภัยและการทำงานพร้อมกันอย่างน้อย 2 จุด และเสนอด่านป้องกันสำหรับแต่ละจุด</li>
+    <li>ออกแบบ test case อย่างน้อย 3 กรณี พร้อมระบุแหล่งที่มาของแต่ละกรณี</li>
+    <li>ออกแบบ usability task หนึ่งข้อ โดยเขียนเป็นเป้าหมาย และระบุ severity ของปัญหาที่อาจพบ</li>
+  </ol>
+  <textarea placeholder="พิมพ์คำตอบของคุณ"></textarea>
+  <details><summary>ดูแนวคำตอบ (กรอบการให้คะแนน)</summary>
+    <ol class="plain">
+      <li>Sequence Diagram สำหรับ flow การสั่งซื้อและตัดสต็อก และ Deployment หรือ Architecture Diagram สำหรับระบบหลายสาขา</li>
+      <li>Race condition เมื่อหลายสาขาตัดสต็อกพร้อมกัน ด่านคือ transaction ร่วมกับ SELECT ... FOR UPDATE / IDOR เมื่อสาขาหนึ่งแก้ข้อมูลของอีกสาขา ด่านคือตรวจ branch_id ใน WHERE ทุก query / รับราคาจาก client ด่านคือดึงราคาจาก server</li>
+      <li>เช่น ตัดสต็อกพอดี, สั่งเมื่อสต็อกไม่พอ (alt), สั่งพร้อมกันสองสาขา (race), รายงานยอดขายแยกตาม branch_id</li>
+      <li>เขียน task เป็นเป้าหมาย เช่น "สั่งเมนูและยืนยันออเดอร์" ไม่ชี้นำปุ่มที่ต้องกด และระบุ severity เช่น Critical หากทำ task ไม่สำเร็จ</li>
+    </ol>
+  </details>
+</div>
+
+<script>
+// ตอนที่ 1: [คำถาม, [ตัวเลือก 4 ข้อ], index ของคำตอบ (0-3), คำอธิบาย]
+const mcqs = [
+  // สัปดาห์ 9
+  ["Lifeline ใน Sequence Diagram แทนสิ่งใด", ["ข้อความที่ส่งระหว่าง object", "ช่วงเวลาที่ object นั้นดำรงอยู่", "เงื่อนไขการแตกแขนง", "การวนซ้ำของข้อความ"], 1, "Lifeline คือเส้นประแนวตั้งแสดงช่วงเวลาที่ object ดำรงอยู่"],
+  ["Activation Bar หมายถึงอะไร", ["ชื่อของ actor", "ช่วงที่ object กำลังประมวลผล", "ลูกศรที่ส่งกลับ", "กรอบเงื่อนไข"], 1, "แท่งสี่เหลี่ยมบางๆ บน lifeline แสดงช่วงที่กำลังประมวลผล"],
+  ["ควรใช้ Loop Fragment เมื่อใด", ["เมื่อมีเงื่อนไข if/else สองทาง", "เมื่อข้อความเกิดซ้ำหลายครั้ง เช่น วนตัดสต็อกทีละรายการ", "เมื่อต้องการแสดง object ใหม่", "เมื่อต้องการแสดงการตอบกลับ"], 1, "Loop ใช้กับข้อความที่เกิดซ้ำหลายครั้ง"],
+  ["เหตุใดจึงใช้ Alt Fragment แทนการวาด diagram แยกหลายฉบับ", ["Alt ทำให้ diagram สวยขึ้น", "แสดงหลายเส้นทางตามเงื่อนไขในแผนภาพเดียว", "Alt ใช้แทน Lifeline ได้", "Alt บังคับให้ใช้ transaction"], 1, "Alt รวมเส้นทางตามเงื่อนไขไว้ในแผนภาพเดียว"],
+  ["เหตุใดราคาต่อหน่วย (unitPrice) ต้องดึงจากฐานข้อมูลฝั่ง server เสมอ", ["เพื่อให้โค้ดสั้นลง", "เพราะค่าจาก client แก้ไขได้ อาจคิดเงินผิด", "เพราะ client ส่ง JSON ไม่ได้", "เพราะ MySQL รับเฉพาะราคาเต็ม"], 1, "ค่าจาก client ไม่น่าเชื่อถือ ต้องดึงจาก menu_item.price"],
+  ["เหตุใดการเก็บ diagram เป็นข้อความ (mermaid/PlantUML) ร่วมกับโค้ดจึงดีกว่าไฟล์ภาพ", ["แก้ไขได้เร็วกว่าเสมอ", "ติดตามการเปลี่ยนแปลงและเทียบ diff ใน version control ได้", "ไฟล์ภาพเปิดไม่ได้", "ไม่ต้องตรวจสอบกับโค้ด"], 1, "อยู่ใน repo เดียวกับโค้ด จึงเห็นการเปลี่ยนแปลงผ่าน version control"],
+  ["การรวมจำนวนรายการที่เป็นเมนูเดียวกันก่อนเช็คสต็อก มีวัตถุประสงค์ใด", ["ลดขนาดฐานข้อมูล", "ตรวจสต็อกตามจำนวนที่ต้องใช้รวมทั้งหมดของเมนูนั้น", "ให้แสดงผลเร็วขึ้นบนหน้าจอ", "เพื่อเปลี่ยนราคาต่อหน่วย"], 1, "หากตรวจทีละรายการ อาจผ่านทุกรายการแต่รวมแล้วสต็อกไม่พอ"],
+  ["PUT ที่ทำ partial update ผิดหลักการ HTTP method เพราะเหตุใด", ["PUT ต้องใช้กับ GET เท่านั้น", "PUT ควรแทนที่ทั้ง resource แต่ partial update ควรใช้ PATCH", "PUT ไม่สามารถส่ง JSON ได้", "PUT ต้องมี transaction เสมอ"], 1, "สไลด์ระบุความไม่สอดคล้องระหว่าง HTTP method กับพฤติกรรมจริงของ endpoint"],
+  ["Sequence Diagram ที่ INSERT order_item และ UPDATE menu_item แยกกันโดยไม่ครอบ transaction อาจเกิดปัญหาใด", ["ข้อความแสดงผลผิด", "race condition ทำให้สต็อกติดลบได้เมื่อสั่งพร้อมกัน", "Lifeline หายไป", "Activation Bar ซ้อนกัน"], 1, "พนักงานสองคนสั่งเมนูเดียวกันพร้อมกันเมื่อสต็อกเหลือน้อย"],
+  // สัปดาห์ 10
+  ["'Garbage In, Garbage Out' หมายถึงอะไร", ["ข้อมูลที่ผิดเข้าสู่ระบบจะให้ผลลัพธ์ที่ผิด", "ระบบต้องลบข้อมูลเก่าทุกวัน", "การพิมพ์ข้อมูลช้าทำให้เสียเวลา", "ข้อมูลต้องไม่ซ้ำกัน"], 0, "GIGO คือข้อมูลนำเข้าผิดทำให้ผลลัพธ์ผิด"],
+  ["วิธีแก้ GIGO ที่ดีที่สุดในช่องเมนูของ POS คือข้อใด", ["ให้พิมพ์ชื่อเมนูเอง", "ให้เลือกจากรายการเมนูที่มีอยู่ (dropdown หรือปุ่ม)", "ให้พนักงานจำรหัสเมนู", "ไม่ต้องมีช่องเลือกเมนู"], 1, "เลือกจากรายการที่มีอยู่ลดข้อมูลผิดตั้งแต่ต้นทาง"],
+  ["ข้อความ 'บันทึกออเดอร์แล้ว' ที่แสดงทันทีหลังกดยืนยัน สอดคล้องกับ heuristic ใด", ["Error Prevention", "Visibility of System Status", "Recognition Rather Than Recall", "Aesthetic Design"], 1, "แจ้งให้ผู้ใช้รู้สถานะระบบเสมอ"],
+  ["การปิดปุ่ม 'ยืนยันออเดอร์' จนกว่าจะเลือกเมนูอย่างน้อยหนึ่งรายการ สอดคล้องกับ heuristic ใด", ["Error Prevention", "Visibility of System Status", "Recognition Rather Than Recall", "Consistency"], 0, "ป้องกันไม่ให้ผู้ใช้ทำผิดตั้งแต่แรก"],
+  ["UI กับ UX ต่างกันอย่างไร", ["UI คือการออกแบบภายในฐานข้อมูล UX คือหน้าจอ", "UI คือสิ่งที่ผู้ใช้เห็นและสัมผัส ส่วน UX คือประสบการณ์ที่ได้รับโดยรวม", "UI และ UX เหมือนกันทุกประการ", "UX คือการเขียนโค้ด"], 1, "ระบบอาจมี UI สวยแต่ UX แย่ได้ถ้าการใช้งานติดขัด"],
+  ["รายงาน Exception มีลักษณะอย่างไร", ["แสดงทุกรายการขายอย่างละเอียด", "แสดงเฉพาะรายการที่ผิดปกติ เช่น สต็อกต่ำกว่าเกณฑ์", "สรุปยอดรวมรายเดือน", "เปรียบเทียบยอดสองสาขา"], 1, "Exception report คัดเฉพาะกรณีที่ต้องให้ความสนใจ"],
+  ["เหตุใด Wireframe ระดับ Mid-Fi จึงเหมาะกับขั้นออกแบบ", ["มีสีและกราฟิกจริงครบทุกจุด", "เพียงพอต่อการสื่อสารโดยไม่เสียเวลาไปกับสีและกราฟิก", "ไม่ต้องแสดงองค์ประกอบของหน้าจอ", "ใช้แทนโค้ดได้ทั้งหมด"], 1, "Mid-Fi เพียงพอต่อการสื่อสาร ระดับ High-Fi ลงรายละเอียดเกินจำเป็นในขั้นนี้"],
+  ["Traceability ในการออกแบบฟอร์มหมายถึงอะไร", ["การเลือกฟอนต์ให้ตรงกัน", "ฟอร์มหรือรายงานทุกชิ้นต้องโยงกลับไปยัง requirement หรือ user story", "การเก็บข้อมูลไว้ในไฟล์เดียว", "การทดสอบบนหลายเบราว์เซอร์"], 1, "หากโยงกลับไม่ได้ อาจเป็นฟีเจอร์ที่ไม่มีความต้องการรองรับ"],
+  ["เหตุใด Sequence Diagram จึงไม่ใช่ที่มาหลักของการออกแบบหน้าจอ", ["เพราะไม่มีสี", "เพราะบอกลำดับการทำงานของระบบ แต่ไม่บอกว่าผู้ใช้เห็นอะไรและตัดสินใจอย่างไร", "เพราะวาดได้เฉพาะในสัปดาห์ 9", "เพราะ UI ต้องใช้ High-Fi เท่านั้น"], 1, "ต้องอาศัย User Story และ Acceptance Criteria ในการออกแบบ UI"],
+  ["ตัวเลข 'เหลือ N' บนการ์ดเมนูหน้า POS ใช่กลไกป้องกันสั่งเกินสต็อกหรือไม่", ["ใช่ เพราะผู้ใช้เห็นแล้วจะหยุดสั่งเอง", "ไม่ใช่ การตรวจสต็อกจริงต้องทำฝั่ง server ภายใน transaction", "ใช่ หากเป็นสีแดง", "ไม่ใช่ เพราะ wireframe ไม่รองรับตัวเลข"], 1, "ตัวเลขบนหน้าจอเป็นเพียงการแสดงผล"],
+  // สัปดาห์ 11
+  ["4+1 View Model มีกี่มุมมองหลัก (ไม่นับ Scenarios)", ["3", "4", "5", "6"], 1, "มี Logical, Process, Development, Physical และ Scenarios เป็น +1"],
+  ["Process View ใน 4+1 View สอดคล้องกับ diagram ใด", ["Use Case Diagram", "Sequence Diagram", "Deployment Diagram", "Class Diagram"], 1, "Process View เน้นลำดับเวลาและ concurrency"],
+  ["Logical View แสดงอะไร", ["โครงสร้าง class และความสัมพันธ์", "node ฮาร์ดแวร์", "โฟลเดอร์ของโค้ด", "ลำดับเวลาการทำงาน"], 0, "Logical View ตรงกับ Class Diagram"],
+  ["Physical View แสดงอะไร", ["โครงสร้างโฟลเดอร์ของ source code", "node ฮาร์ดแวร์ เครือข่าย และการ deploy จริง", "ความสัมพันธ์ของ use case", "ลำดับการเรียกฟังก์ชัน"], 1, "Physical View ตรงกับ Deployment Diagram"],
+  ["Development View ควรสะท้อนอะไร", ["โครงสร้างการจัดระเบียบ source code เช่น routes, controllers, models", "จำนวนผู้ใช้ที่เข้าระบบ", "ลำดับข้อความระหว่าง object", "ขนาดหน้าจอ"], 0, "Development View ต้องสะท้อนโครงสร้างโค้ดจริง"],
+  ["Monolithic Architecture ของโครงงานร้านกาแฟมีลักษณะใด", ["แยกทุกฟีเจอร์เป็น microservice คนละ process", "รวม routing, business logic และ data access ไว้ใน process เดียว deploy เป็นหน่วยเดียว", "ใช้หลายฐานข้อมูลคนละเครื่อง", "ไม่มีการแบ่ง layer"], 1, "ทุกกลุ่ม deploy เป็น Node.js process เดียวที่ localhost:3000"],
+  ["Architecture Diagram ควรสร้างอย่างไรให้ถูกต้อง", ["วาดตามทฤษฎีเท่านั้น", "ตรวจสอบให้ตรงกับโครงสร้าง repository จริง", "วาดให้สวยที่สุด แม้มี component ที่ยังไม่มี", "คัดลอกจากเว็บอื่น"], 1, "ต้องสะท้อนสิ่งที่มีอยู่จริงใน repo"],
+  ["ความผิดพลาดที่พบบ่อยในการวาด Architecture Diagram คืออะไร", ["ใช้สีมากเกินไป", "วาด component ที่ยังไม่มีอยู่จริง", "ใช้ชื่อภาษาไทย", "วาดเป็น mermaid"], 1, "ทำให้ผู้อ่านเข้าใจผิดว่าระบบรองรับสิ่งนั้น"],
+  ["เมื่อรู้ข้อจำกัดที่ยังไม่แก้ เช่น ไม่มี transaction ควรสื่อสารใน diagram อย่างไร", ["ละไว้เพื่อให้ดูสมบูรณ์", "บอกตรงไปตรงมาเป็น known limitation", "ลบ component นั้นออกทั้งหมด", "ไม่ต้องบอกหากนักศึกษาตั้งใจแก้ภายหลัง"], 1, "diagram ที่ดูสมบูรณ์เกินจริงทำให้ผู้ตัดสินใจต่อพลาดได้"],
+  ["Class Diagram, ER Diagram, Sequence Diagram และ Architecture Diagram ของระบบเดียวกันควรมีความสัมพันธ์อย่างไร", ["ต่างกันโดยสิ้นเชิง ไม่ต้องตรวจร่วมกัน", "เป็นคนละมุมมองของการออกแบบเดียวกัน และต้องสอดคล้องกันได้", "ใช้แทนกันได้ทุกแบบ", "ต้องเหมือนกันทุกประการ"], 1, "ทั้งสี่เป็นคนละมุมมอง แต่ต้องตรวจสอบความสอดคล้องระหว่างกันได้"],
+  ["เหตุใดโครงงานขนาดเล็กในวิชาจึงเลือก Monolithic ร่วมกับ Layered", ["เพราะทีมใหญ่และระยะเวลายาวนาน", "เพราะทีมเล็ก เวลาจำกัด และขอบเขตระบบไม่ซับซ้อนพอให้คุ้มกับ Microservices", "เพราะ Layered ทำงานได้เฉพาะกับ Monolithic", "เพราะไม่ต้องมีฐานข้อมูล"], 1, "Monolithic ที่จัดเป็น layer ให้การแยกความรับผิดชอบโดยไม่ซับซ้อนเกินไป"],
+  // สัปดาห์ 12
+  ["Usability Testing ต่างจากการออกแบบ UI/UX ในสัปดาห์ 10 อย่างไร", ["ออกแบบคือการคาดการณ์ ส่วนทดสอบคือการตรวจสอบว่าผู้ใช้จริงใช้ได้จริงหรือไม่", "ทั้งสองเป็นขั้นตอนเดียวกัน", "ทดสอบคือการเขียนโค้ด", "ออกแบบทำหลังส่งมอบระบบ"], 0, "Design คือคาดการณ์ Usability Testing คือ validate ด้วยผู้ใช้จริง"],
+  ["Nielsen (1994) ชี้ว่าการทดสอบกับผู้ใช้กี่คนจะค้นพบปัญหาได้ประมาณ 85%", ["3 คน", "5 คน", "10 คน", "20 คน"], 1, "5 คนต่อรอบพบประมาณ 85% ของปัญหาทั้งหมด"],
+  ["Task ที่ดีในการทดสอบ usability ควรเป็นลักษณะใด", ["เป้าหมายปลายทาง ไม่ชี้นำขั้นตอนทีละปุ่ม", "ขั้นตอนละเอียดทีละปุ่ม", "คำถามให้ตอบ Yes/No", "มีคำแนะนำอยู่ในโจทย์"], 0, "หากชี้นำเกินไป ผลจะไม่สะท้อนการใช้งานจริง"],
+  ["Think-Aloud แบบ Concurrent หมายถึงอะไร", ["ผู้ทดสอบพูดความคิดออกมาระหว่างทำ task", "ทำ task เสร็จก่อนแล้วดูวิดีโอย้อนหลัง", "ผู้สังเกตการณ์ตอบคำถามแทน", "ไม่มีการพูดระหว่างทดสอบ"], 0, "Concurrent คือพูดระหว่างทำ task ส่วน Retrospective คือดูย้อนหลัง"],
+  ["เหตุใดผู้สังเกตการณ์จึงไม่ควรช่วยชี้นำระหว่าง Think-Aloud แม้เห็นว่าผู้ทดสอบจะทำผิด", ["เพราะจะทำให้ผลไม่ตรงกับการใช้งานจริง", "เพราะกฎหมายห้าม", "เพราะจะเสียเวลาเปิดวิดีโอ", "เพราะผู้ทดสอบจะไม่พูดอีก"], 0, "การชี้นำทำให้เห็นปัญหาที่ผู้ใช้จริงจะไม่เจอ"],
+  ["Severity ระดับ Critical หมายถึงอะไร", ["ปัญหาความสวยงามเล็กน้อย", "ผู้ทดสอบทำ task ไม่สำเร็จเลย หรือระบบทำงานผิดพลาดจนไม่บันทึก", "สีปุ่มไม่ตัดกัน", "ไอคอนดูไม่ทันสมัย"], 1, "Critical คือกระทบการทำงานหลักมากที่สุด ต้องแก้ก่อน"],
+  ["Severity ระดับ Major ตัวอย่างใดเหมาะที่สุด", ["สีปุ่มไม่ตัดกับพื้นหลัง", "ไอคอนกาแฟดูเก่า", "ทำสำเร็จแต่ใช้เวลานานผิดปกติ เช่น หาปุ่มยืนยันไม่เจอ 15 วินาที", "ข้อความสะกดผิดเล็กน้อย"], 2, "Major คือสำเร็จแต่ติดขัดมากหรือสับสนมาก"],
+  ["เมื่อ severity กับความถี่ขัดแย้งกัน ควรจัดลำดับอย่างไร", ["ดูความถี่เป็นหลัก", "ดู severity เป็นหลัก ความถี่ใช้จัดลำดับภายในระดับเดียวกัน", "แก้ทุกอย่างพร้อมกัน", "ไม่ต้องแก้ปัญหาที่พบบ่อย"], 1, "Major ที่พบครั้งเดียวมาก่อน Minor ที่พบซ้ำหลายคน"],
+  ["ผลการทดสอบ usability อาจทำให้ต้องย้อนกลับไปแก้ Wireframe เพราะเหตุใด", ["เพราะ Wireframe ต้องแก้ทุกสัปดาห์", "เพราะปัญหาอาจมาจากการออกแบบหน้าจอ ไม่ใช่แค่โค้ด UI", "เพราะการทดสอบห้ามใช้ Wireframe", "เพราะ Wireframe ต้องทำเป็น High-Fi"], 1, "ต้องตรวจว่าปัญหาเกิดจากการออกแบบหรือ implementation"],
+  // สัปดาห์ 13
+  ["Integration Testing ต่างจาก End-to-End Testing อย่างไร", ["Integration ทดสอบทั้งระบบผ่านหน้าจอ E2E ทดสอบทีละคู่ module", "Integration ทดสอบ component ที่เชื่อมต่อกันทีละคู่ ส่วน E2E ทดสอบ flow ทั้งระบบ", "ทั้งสองเหมือนกัน", "E2E ทดสอบเฉพาะฐานข้อมูล"], 1, "E2E ครอบคลุม frontend, backend และ DB พร้อมกัน"],
+  ["API Contract ที่กำหนดล่วงหน้าช่วยอะไร", ["ลดปัญหาการรวมระบบ เพราะทุกฝั่งรู้รูปแบบข้อมูลที่ตกลงกันไว้", "ทำให้ไม่ต้อง test", "ลดจำนวน endpoint ลงเป็นศูนย์", "ทำให้ใช้ฐานข้อมูลเดียวไม่ได้"], 0, "ช่วยให้แต่ละฝั่งพัฒนาคู่ขนานได้อย่างสอดคล้อง"],
+  ["Merge conflict เกิดจากเหตุใด", ["แก้ไขไฟล์เดียวกันพร้อมกันในหลาย branch", "ใช้ naming convention ต่างกัน", "ข้อมูลในฐานข้อมูลซ้ำกัน", "ไม่มี API Contract"], 0, "เป็นปัญหาการแก้ไขไฟล์เดียวกันในหลาย branch"],
+  ["แหล่งที่มาในการออกแบบ test case ที่สไลด์ระบุ ไม่รวมข้อใด", ["Use Case", "Acceptance Criteria", "Business Rule", "ขนาดหน้าจอของ monitor"], 3, "แหล่งคือ Use Case, Testable Requirement, Acceptance Criteria, Business Rule และ Alt Fragment"],
+  ["องค์ประกอบของ test case ที่สมบูรณ์ ไม่รวมข้อใด", ["TC ID และ Precondition", "ผลลัพธ์ที่คาดหวังและผลจริง", "Pass/Fail", "สีของปุ่มที่ใช้ในการทดสอบ"], 3, "Test case มี TC ID, Precondition, ขั้นตอน, ผลที่คาดหวัง/จริง และ Pass/Fail"],
+  ["ลำดับการแก้ bug ที่ถูกต้องคือข้อใด", ["Fix → Reproduce → Isolate", "Reproduce → Isolate → Fix and Verify", "Isolate → Fix → Reproduce", "Fix and Verify → Reproduce → Isolate"], 1, "ต้องทำให้เกิดซ้ำได้ก่อน แยกสาเหตุ แล้วแก้และยืนยัน"],
+  ["Refactoring ตามนิยามของ Fowler (2018) คืออะไร", ["เพิ่ม feature ใหม่", "ปรับโครงสร้างโค้ดโดยไม่เปลี่ยนพฤติกรรมภายนอก", "ลบ test case", "เปลี่ยนฐานข้อมูล"], 1, "พฤติกรรมที่ผู้ใช้เห็นต้องไม่เปลี่ยน"],
+  ["ความเสี่ยงของ SUM ใน SQL ที่สไลด์กล่าวถึงคืออะไร", ["อาจคืนค่าเป็น string ทำให้ชนิดข้อมูลคลาดเคลื่อน", "ทำให้เกิด SQL Injection", "ทำให้เกิด IDOR", "ทำให้ตารางถูกลบ"], 0, "ต้องตรวจชนิดข้อมูลก่อนนำไปคำนวณ"],
+  ["เหตุใดการทดสอบ flow หลักควรทำกับอย่างน้อย 2 สาขา", ["เพื่อให้ผลทดสอบดูหลากหลาย", "เพราะการกรอง branch_id ผิดจุดอาจทดสอบผ่านในสาขาเดียว แต่พลาดในอีกสาขา", "เพราะระบบต้องมีอย่างน้อย 2 สาขาเสมอ", "เพราะทดสอบ 2 ครั้งเร็วกว่า"], 1, "บั๊กเรื่อง WHERE branch_id มักมองไม่เห็นเมื่อทดสอบสาขาเดียว"],
+  ["การบันทึกการปรับปรุง requirement ควรมีองค์ประกอบใด", ["เฉพาะโค้ดใหม่", "เหตุผลและวันที่ของการปรับปรุง", "ภาพหน้าจอเท่านั้น", "ชื่อผู้พัฒนาเท่านั้น"], 1, "เป็นหลักฐานของการปรับปรุงที่ประเมินได้"],
+  ["ค่า group by ของรายงานใช้ m.menu_id และ m.name ควรระวังอะไร", ["ชื่อซ้ำกันอาจทำให้รวมยอดผิด หากใช้ GROUP BY m.name เพียงอย่างเดียว", "ใช้ GROUP BY ไม่ได้", "รายงานจะช้าเสมอ", "ต้องใช้ IDOR"], 0, "ควรจัดกลุ่มตาม menu_id ที่เป็น primary key"],
+  // สัปดาห์ 14
+  ["การผ่าน E2E แปลว่าโค้ดปลอดภัยเสมอหรือไม่", ["ใช่เสมอ", "ไม่เสมอ เพราะ E2E ไม่ได้ตรวจ race condition หรือช่องโหว่ด้านความปลอดภัย", "ใช่ หากผ่านบน frontend", "ไม่ เพราะ E2E ใช้ Mid-Fi"], 1, "ต้องมี code review คุณภาพและความปลอดภัยแยกต่างหาก"],
+  ["Insecure Direct Object Reference (IDOR) คืออะไร", ["การใช้ id ที่ผู้ใช้ส่งมา เพื่อเข้าถึงข้อมูลโดยไม่ตรวจสิทธิ์", "การส่งคำสั่ง SQL ที่แทรกค่าได้", "การเข้ารหัสรหัสผ่านอ่อน", "การ log ข้อผิดพลาด"], 0, "ไม่ตรวจสิทธิ์ว่า id นั้นเป็นของสาขาที่ผู้ใช้สังกัดหรือไม่"],
+  ["เหตุใด parameterized query จึงป้องกัน SQL Injection", ["ค่า input ถูกส่งแยกจากโครงสร้างคำสั่ง SQL", "เข้ารหัสทุก query", "จำกัดความยาว input", "ใช้ HTTPS"], 0, "ฐานข้อมูลจึงไม่ตีความค่า input เป็นส่วนของคำสั่ง"],
+  ["การต่อ string SQL ด้วย template literal จากค่าที่ผู้ใช้ส่งมามีความเสี่ยงอย่างไร", ["ทำให้เกิด SQL Injection ได้", "ทำให้ SELECT ช้าลง", "ทำให้เกิด IDOR เท่านั้น", "ไม่มีความเสี่ยง"], 0, "ค่าจาก input อาจเปลี่ยนความหมายของ query ทั้งหมด"],
+  ["SELECT ... FOR UPDATE ภายใน transaction ทำหน้าที่อะไรต่อ race condition", ["ล็อกแถวที่อ่านไว้ ให้ transaction อื่นต้องรอจนกว่าจะจบ", "ลบข้อมูลเก่า", "เข้ารหัสค่าที่อ่าน", "ทำให้ query เร็วขึ้น"], 0, "ป้องกันการตัดสต็อกซ้ำจนติดลบ"],
+  ["เหตุใดต้องครอบ SELECT, INSERT และ UPDATE ไว้ใน transaction เดียวกัน", ["เพื่อให้ทั้งชุดสำเร็จหรือล้มเหลวพร้อมกัน และไม่ให้ข้อมูลกลางคันถูกแก้โดยคนอื่น", "เพื่อให้โค้ดยาวขึ้น", "เพราะ MySQL บังคับ", "เพื่อเปลี่ยน HTTP method"], 0, "ป้องกันความไม่สอดคล้องของข้อมูล"],
+  ["หากพบความเสี่ยงในโค้ดแต่ยังไม่มีเวลาแก้ทุกจุด ควรทำอย่างไร", ["ซ่อนไว้ไม่ให้เห็น", "บันทึกความเสี่ยงที่ยังไม่แก้ไว้อย่างชัดเจน", "ลบ endpoint ทิ้งทันที", "รอให้มีคนพบเอง"], 1, "ความเสี่ยงที่ยังไม่แก้ต้องถูกบันทึกในรายงาน"],
+  ["การ error handling ที่ดี ไม่ควรทำอย่างไร", ["ส่งข้อความ error ทั่วไปให้ผู้ใช้", "ส่งรายละเอียด error ภายในของฐานข้อมูลกลับไปให้ client โดยตรง", "บันทึก error ใน log ฝั่ง server", "ตอบ status code ที่เหมาะสม"], 1, "รายละเอียดภายในอาจช่วยผู้โจมตี"],
+  ["ข้อใดไม่อยู่ใน Code Review Checklist 5 ข้อของสัปดาห์ 14", ["Input Validation", "IDOR", "Font Size Consistency", "Race Condition"], 2, "เช็กลิสต์คือ Input Validation, IDOR, SQL Injection, Error Handling, Race Condition"],
+  ["เหตุใด IDOR และ Race Condition จึงตรวจพบได้ยากด้วยเครื่องมืออัตโนมัติ", ["เพราะเป็นความเสี่ยงที่ขึ้นกับความหมายของสิทธิ์และลำดับเวลา ซึ่งเครื่องมือทั่วไปมักมองไม่เห็น", "เพราะเครื่องมือไม่ทำงานกับ JavaScript", "เพราะทั้งสองไม่มีผลต่อระบบ", "เพราะต้องใช้ Mid-Fi"], 0, "ต้องอาศัยการตรวจโดยมนุษย์และการเข้าใจ flow"]
+];
+
+const mcqEl = document.getElementById("mcq");
+mcqs.forEach((item, i) => {
+  const div = document.createElement("div");
+  div.className = "card";
+  let html = `<p class="q">${i + 1}. ${item[0]}</p><div class="opts">`;
+  item[1].forEach((opt, j) => {
+    html += `<label><input type="radio" name="q${i}" value="${j}">${String.fromCharCode(65 + j)}. ${opt}</label>`;
+  });
+  html += `</div><div class="expl">${item[3]}</div>`;
+  div.innerHTML = html;
+  mcqEl.appendChild(div);
+});
+
+function checkMcq() {
+  let score = 0;
+  mcqs.forEach((item, i) => {
+    const card = mcqEl.children[i];
+    const labels = card.querySelectorAll("label");
+    const chosen = card.querySelector(`input[name="q${i}"]:checked`);
+    labels.forEach((l, j) => {
+      l.classList.remove("correct", "wrong");
+      if (j === item[2]) l.classList.add("correct");
+      if (chosen && Number(chosen.value) === j && j !== item[2]) l.classList.add("wrong");
+    });
+    if (chosen && Number(chosen.value) === item[2]) score++;
+    card.querySelector(".expl").classList.add("show");
+  });
+  document.getElementById("mcqScore").textContent = `ได้ ${score} / ${mcqs.length} ข้อ`;
+}
+function resetMcq() {
+  document.querySelectorAll("#mcq input[type=radio]").forEach(r => r.checked = false);
+  document.querySelectorAll("#mcq label").forEach(l => l.classList.remove("correct", "wrong"));
+  document.querySelectorAll("#mcq .expl").forEach(e => e.classList.remove("show"));
+  document.getElementById("mcqScore").textContent = "";
+}
+document.getElementById("checkMcq").addEventListener("click", checkMcq);
+document.getElementById("resetMcq").addEventListener("click", resetMcq);
+
+// ตอนที่ 2
+const D = ["Class Diagram", "Sequence Diagram", "Component Diagram", "Deployment Diagram", "Use Case Diagram"];
+const S = [
+  { id: "match1", items: [
+    { label: "Logical View", answer: "Class Diagram", options: D },
+    { label: "Process View", answer: "Sequence Diagram", options: D },
+    { label: "Development View", answer: "Component Diagram", options: D },
+    { label: "Physical View", answer: "Deployment Diagram", options: D } ] },
+  { id: "match2", items: [
+    { label: "IDOR (แก้ข้อมูลของสาขาอื่นได้)", answer: "ตรวจ branch_id ควบคู่กับ id ใน WHERE ทุก query", options: ["ตรวจ branch_id ควบคู่กับ id ใน WHERE ทุก query", "ใช้ parameterized query", "ล็อกแถวด้วย FOR UPDATE ใน transaction", "ตั้ง Lifeline ให้ยาวขึ้น"] },
+    { label: "SQL Injection (ต่อ string SQL จาก input)", answer: "ใช้ parameterized query", options: ["ตรวจ branch_id ควบคู่กับ id ใน WHERE ทุก query", "ใช้ parameterized query", "ล็อกแถวด้วย FOR UPDATE ใน transaction", "ตั้ง Lifeline ให้ยาวขึ้น"] },
+    { label: "Race Condition (ตัดสต็อกซ้ำจนติดลบ)", answer: "ล็อกแถวด้วย FOR UPDATE ใน transaction", options: ["ตรวจ branch_id ควบคู่กับ id ใน WHERE ทุก query", "ใช้ parameterized query", "ล็อกแถวด้วย FOR UPDATE ใน transaction", "ตั้ง Lifeline ให้ยาวขึ้น"] } ] },
+  { id: "match3", items: [
+    { label: "ปุ่ม 'ยืนยันออเดอร์' ถูกปิดจนกว่าจะเลือกเมนู", answer: "Error Prevention", options: ["Error Prevention", "Visibility of System Status", "Recognition Rather Than Recall"] },
+    { label: "หลังกดยืนยันแสดงข้อความ 'บันทึกออเดอร์แล้ว' ทันที", answer: "Visibility of System Status", options: ["Error Prevention", "Visibility of System Status", "Recognition Rather Than Recall"] },
+    { label: "ให้เลือกเมนูจาก dropdown แทนการพิมพ์ชื่อเมนู", answer: "Recognition Rather Than Recall", options: ["Error Prevention", "Visibility of System Status", "Recognition Rather Than Recall"] } ] }
+];
+S.forEach(set => {
+  const el = document.getElementById(set.id);
+  set.items.forEach((item, i) => {
+    const row = document.createElement("div");
+    row.className = "match-row";
+    let opts = `<option value="">-- เลือก --</option>`;
+    item.options.forEach(o => opts += `<option value="${o}">${o}</option>`);
+    row.innerHTML = `<span class="label">${i + 1}. ${item.label}</span><select data-set="${set.id}" data-idx="${i}">${opts}</select><span class="match-result"></span>`;
+    el.appendChild(row);
+  });
+});
+document.getElementById("checkMatch").addEventListener("click", () => {
+  let total = 0, correct = 0;
+  S.forEach(set => set.items.forEach((item, i) => {
+    total++;
+    const sel = document.querySelector(`select[data-set="${set.id}"][data-idx="${i}"]`);
+    const res = sel.parentElement.querySelector(".match-result");
+    if (sel.value === item.answer) { correct++; res.textContent = "✓"; res.className = "match-result ok"; }
+    else { res.textContent = "✗ เฉลย: " + item.answer; res.className = "match-result no"; }
+  }));
+  document.getElementById("matchScore").textContent = `ได้ ${correct} / ${total} ข้อ`;
+});
+
+// ตอนที่ 3: ตอบโดยย่อ 5 ข้อ
+const shorts = [
+  ["ทำไม Usability Testing กับผู้ใช้ประมาณ 5 คนจึงมักเพียงพอ", "Nielsen (1994) พบว่า 5 คนต่อรอบค้นพบปัญหาได้ราว 85% เพราะปัญหาส่วนใหญ่ซ้ำกันข้ามผู้ทดสอบ เพิ่มเกิน 5 คนจะพบปัญหาใหม่น้อยลง (diminishing returns)"],
+  ["เหตุใดต้องดึง unitPrice จากฐานข้อมูลฝั่ง server แทนรับจาก req.body", "ค่าที่มาจาก client แก้ไขได้ เช่น ส่งราคาต่ำลง ระบบจะคิดเงินผิดโดยไม่มีใครตรวจพบ การดึงจาก menu_item.price ทำให้ราคาควบคุมโดย server เพียงแห่งเดียว"],
+  ["Architecture Diagram ควรตรวจสอบกับ repo จริงอย่างไร", "ต้องสะท้อนโครงสร้างที่มีอยู่จริง เช่น โฟลเดอร์ routes, controllers, models หากวาด component ที่ยังไม่มีหรือไม่บอกข้อจำกัดที่รู้อยู่ ผู้ตัดสินใจต่อจะเข้าใจผิดว่าระบบรองรับแล้ว"],
+  ["เหตุใดการตัดสต็อกต้องอยู่ใน transaction พร้อม SELECT ... FOR UPDATE", "หากอ่านสต็อกและตัดสต็อกแยกกันโดยไม่ล็อก คำสั่งสองคนที่ทำพร้อมกันอาจอ่านค่าเดิมแล้วตัดซ้ำจนติดลบ การล็อกแถวทำให้ออเดอร์ที่เข้ามาพร้อมกันต้องรอ และ transaction ทำให้ทั้งชุดสำเร็จหรือยกเลิกพร้อมกัน"],
+  ["เหตุใดการผ่าน E2E จึงไม่ได้แปลว่าโค้ดปลอดภัยเสมอไป", "E2E ตรวจว่า flow ปกติทำงานตาม Acceptance Criteria แต่ไม่ได้ตรวจ race condition และช่องโหว่ เช่น IDOR หรือ SQL Injection จึงต้องมีการ review คุณภาพและความปลอดภัยแยกต่างหาก"]
+];
+document.getElementById("short").innerHTML = shorts.map((s, i) => `
+  <div class="card">
+    <p class="q">${i + 1}. ${s[0]}</p>
+    <textarea placeholder="พิมพ์คำตอบของคุณ (1–3 บรรทัด)"></textarea>
+    <details><summary>ดูแนวคำตอบ</summary><p>${s[1]}</p></details>
+  </div>`).join("");
+</script>
+</body>
+</html>
